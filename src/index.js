@@ -40,5 +40,5 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, async () => {
   await connect()
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running`);
 });
