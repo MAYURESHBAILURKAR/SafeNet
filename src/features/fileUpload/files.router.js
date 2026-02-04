@@ -58,7 +58,7 @@ router.delete('/:id', auth, async (req, res) => {
     if (file.public_id) {
         // We use 'resource_type: raw' for PDFs/Docs, 'image'/'video' otherwise
         const type = file.format === 'image' ? 'image' : file.format === 'video' ? 'video' : 'raw';
-        console.log(file.public_id);
+        // console.log(file.public_id);
         
         await cloudinary.uploader.destroy(file.public_id, { resource_type: type });
     }
